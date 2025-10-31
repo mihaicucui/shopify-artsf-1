@@ -1,0 +1,112 @@
+{% comment %}
+  Custom image input snippet for product-picture-style template.
+  Requires an image to be uploaded before add to cart/buy now buttons are enabled.
+  Accepts:
+  - section: {Object} section object
+  - block: {Object} block object (optional)
+{% endcomment %}
+{%- assign product_form_id = 'product-form-' | append: section.id -%}
+<div class="product-form__input product-form__image-input" {{ block.shopify_attributes }}>
+  <label
+    class="form__label"
+    for="ProductImageInput-{{ section.id }}"
+  >
+    {{ block.settings.label | default: 'Upload Image' }}
+    <span class="required" aria-label="required">*</span>
+  </label>
+  <input
+    type="file"
+    id="ProductImageInput-{{ section.id }}"
+    name="properties[Image]"
+    accept="image/*"
+    class="product-form__image-input-field"
+    form="{{ product_form_id }}"
+    required
+    data-image-input-required="true"
+    data-section-id="{{ section.id }}"
+  >
+  <div class="product-form__image-preview" id="ImagePreview-{{ section.id }}" style="display: none;">
+    <img id="ImagePreviewImg-{{ section.id }}" src="" alt="Preview" style="max-width: 200px; max-height: 200px; margin-top: 10px; border-radius: 4px;">
+    <button type="button" class="product-form__image-remove button button--secondary" id="ImageRemove-{{ section.id }}" style="margin-top: 10px;">Remove Image</button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const sectionId = '{{ section.id }}';
+    const imageInput = document.getElementById('ProductImageInput-' + sectionId);
+    const imagePreview = document.getElementById('ImagePreview-' + sectionId);
+    const imagePreviewImg = document.getElementById('ImagePreviewImg-' + sectionId);
+    const imageRemoveBtn = document.getElementById('ImageRemove-' + sectionId);
+    const productForm = document.querySelector('[data-section-id="' + sectionId + '"] product-form');
+    
+    if (!imageInput) return;
+    
+    function updateButtonsState(hasImage) {
+      if (productForm) {
+        const submitButton = productForm.querySelector('[type="submit"]');
+        if (submitButton) {
+          if (hasImage) {
+            submitButton.removeAttribute('disabled');
+            submitButton.removeAttribute('aria-disabled');
+            submitButton.classList.remove('disabled');
+          } else {
+            submitButton.setAttribute('disabled', 'disabled');
+            submitButton.setAttribute('aria-disabled', 'true');
+            submitButton.classList.add('disabled');
+          }
+        }
+        
+        // Handle Shopify payment button
+        const paymentButtonContainer = productForm.querySelector('.shopify-payment-button');
+        if (paymentButtonContainer) {
+          const paymentButtons = paymentButtonContainer.querySelectorAll('[role="button"], button');
+          paymentButtons.forEach(function(btn) {
+            if (hasImage) {
+              btn.style.pointerEvents = 'auto';
+              btn.style.opacity = '1';
+              btn.style.cursor = 'pointer';
+              btn.removeAttribute('disabled');
+            } else {
+              btn.style.pointerEvents = 'none';
+              btn.style.opacity = '0.5';
+              btn.style.cursor = 'not-allowed';
+              btn.setAttribute('disabled', 'disabled');
+            }
+          });
+        }
+      }
+    }
+    
+    function handleImageSelect(event) {
+      const file = event.target.files[0];
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          imagePreviewImg.src = e.target.result;
+          imagePreview.style.display = 'block';
+          updateButtonsState(true);
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+    
+    function handleImageRemove() {
+      imageInput.value = '';
+      imagePreview.style.display = 'none';
+      imagePreviewImg.src = '';
+      updateButtonsState(false);
+    }
+    
+    imageInput.addEventListener('change', handleImageSelect);
+    if (imageRemoveBtn) {
+      imageRemoveBtn.addEventListener('click', handleImageRemove);
+    }
+    
+    // Initialize button state on page load
+    setTimeout(function() {
+      updateButtonsState(imageInput.files.length > 0);
+    }, 100);
+  })();
+</script>
+
