@@ -485,7 +485,7 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
-              {%- when 'image_input' -%}
+              {%- when 'custom_image_input' -%}
                 <div class="product-form__input product-form__image-input" {{ block.shopify_attributes }}>
                   <label class="form__label" for="ImageInput-{{ block.id }}-{{ section.id }}">
                     {{ block.settings.label | default: 'Add an image' }}
@@ -975,25 +975,7 @@
       ]
     },
     {
-      "type": "image_input",
-      "name": "Image Input",
-      "settings": [
-        {
-          "type": "text",
-          "id": "label",
-          "label": "Label",
-          "default": "Image"
-        },
-        {
-          "type": "text",
-          "id": "button_text",
-          "label": "Button Text",
-          "default": "Add an image"
-        }
-      ]
-    },
-    {
-      "type": "image_input",
+      "type": "custom_image_input",
       "name": "Image Input",
       "settings": [
         {
