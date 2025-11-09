@@ -45,6 +45,10 @@
             "text_style": "body"
           }
         },
+        "magical_form_fields_custom_fields_fR4NMq": {
+          "type": "shopify://apps/magical-form-fields/blocks/custom-fields/626d3eec-22be-4e6e-af63-f28f8a4eec26",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -70,6 +74,7 @@
         "variant_picker",
         "quantity_selector",
         "text_rWATFe",
+        "magical_form_fields_custom_fields_fR4NMq",
         "buy_buttons",
         "description",
         "share"

@@ -147,8 +147,8 @@
         "type": "shopify://apps/magical-form-fields/blocks/magical-custom-fields/626d3eec-22be-4e6e-af63-f28f8a4eec26",
         "disabled": false,
         "settings": {
-          "cart_line_item_component_price": true,
-          "display_group_name": true,
+          "cart_line_item_component_price": false,
+          "display_group_name": false,
           "font": "system_ui_n4",
           "surface_color": "#ffffff",
           "text_color": "#222223",
