@@ -148,7 +148,7 @@
         "disabled": false,
         "settings": {
           "cart_line_item_component_price": true,
-          "display_group_name": false,
+          "display_group_name": true,
           "font": "system_ui_n4",
           "surface_color": "#ffffff",
           "text_color": "#222223",
