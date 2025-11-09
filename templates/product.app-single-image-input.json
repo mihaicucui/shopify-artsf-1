@@ -38,6 +38,13 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "text_rWATFe": {
+          "type": "text",
+          "settings": {
+            "text": "Incepe configurarea:",
+            "text_style": "body"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -62,6 +69,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "text_rWATFe",
         "buy_buttons",
         "description",
         "share"
