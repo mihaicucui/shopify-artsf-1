@@ -160,7 +160,7 @@
           "border_critical_color": "#fd5749",
           "border_radius": 0,
           "text_align": "left",
-          "custom_css": ""
+          "custom_css": ".ma-custom-field {\nwidth: 100%!important;\nmax-width: 100%!important;\n}"
         }
       }
     },
@@ -438,7 +438,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".ma-custom-field{width: 100%!important; max-width: 100%!important;}"
+      ".ma-custom-field {width: 100% !important; max-width: 100% !important;}"
     ]
   }
 }
