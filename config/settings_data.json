@@ -160,7 +160,7 @@
           "border_critical_color": "#fd5749",
           "border_radius": 0,
           "text_align": "left",
-          "custom_css": "input[type=\"date\"] {\n  width: 100%;\n  max-width: 100%;\n  min-width: 0;\n  box-sizing: border-box;\n}\n\n@supports (-webkit-touch-callout: none) {\n  /* iOS-specific fixes */\n  input[type=\"date\"] {\n    font-size: 16px; /* prevents auto-zoom */\n  }\n}"
+          "custom_css": "/* 1. Force all date inputs to never exceed screen width */\ninput[type=\"date\"] {\n  width: 100% !important;\n  max-width: 100% !important;\n  min-width: 0 !important;\n  box-sizing: border-box !important;\n  overflow: hidden !important;\n}\n\n/* 2. Fix plugin wrappers that force overflow */\ninput[type=\"date\"],\ninput[type=\"date\"] * {\n  max-width: 100% !important;\n}\n\n/* 3. Any parent container of the date field */\ninput[type=\"date\"] {\n  display: block !important;\n}\n\n/* 4. iOS-specific — prevent zoom and layout expansion */\n@supports (-webkit-touch-callout: none) {\n  input[type=\"date\"] {\n    font-size: 16px !important;\n  }\n}\n\n/* 5. Critical fix: override flex containers that cause overflow */\ninput[type=\"date\"] {\n  flex: 1 1 auto !important;\n}\n\ninput[type=\"date\"]::-webkit-date-and-time-value {\n  text-align: left; /* prevents stretching */\n}"
         }
       }
     },
