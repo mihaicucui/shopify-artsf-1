@@ -435,5 +435,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".ma-custom-field{width: 100%!important; max-width: 100%!important;}"
+    ]
   }
 }
