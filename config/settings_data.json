@@ -160,7 +160,7 @@
           "border_critical_color": "#fd5749",
           "border_radius": 0,
           "text_align": "left",
-          "custom_css": ".ma-custom-field {\nwidth: 100%!important;\nmax-width: 100%!important;\n}"
+          "custom_css": "input[type=\"date\"] {\n  width: 100%;\n  max-width: 100%;\n  min-width: 0;\n  box-sizing: border-box;\n}\n\n@supports (-webkit-touch-callout: none) {\n  /* iOS-specific fixes */\n  input[type=\"date\"] {\n    font-size: 16px; /* prevents auto-zoom */\n  }\n}"
         }
       }
     },
