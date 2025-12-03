@@ -438,7 +438,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "input[type=\"date\"] {min-height: 48px;}"
+      "custom-fields {}"
     ]
   }
 }
