@@ -38,13 +38,6 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
         "description": {
           "type": "description",
           "settings": {}
@@ -52,6 +45,13 @@
         "magical_form_fields_custom_fields_BtLCkn": {
           "type": "shopify://apps/magical-form-fields/blocks/custom-fields/626d3eec-22be-4e6e-af63-f28f8a4eec26",
           "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
         },
         "share": {
           "type": "share",
@@ -66,9 +66,9 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
         "description",
         "magical_form_fields_custom_fields_BtLCkn",
+        "buy_buttons",
         "share"
       ],
       "settings": {
