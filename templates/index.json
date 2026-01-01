@@ -1,1 +1,233 @@
-{"sections":{"image_with_text_3PaXKQ":{"type":"image-with-text","blocks":{"heading_dRJyMC":{"type":"heading","settings":{"heading":"Arta personalizata la un click distanta","heading_size":"h2"}},"text_FbMQcB":{"type":"text","settings":{"text":"<p>Fiecare lucrare este creată cu atenție la detalii și emoție, pornind de la fotografii reale, apoi transpusă digital și imprimată pe suport fizic de calitate. Scopul nostru este să transformam amintirile speciale în opere de artă unice, gata să fie expuse sau oferite cadou.<\/p>","text_style":"body"}},"button_QUXaje":{"type":"button","settings":{"button_label":"Vezi produsele","button_link":"shopify:\/\/collections\/all","button_style_secondary":true}}},"block_order":["heading_dRJyMC","text_FbMQcB","button_QUXaje"],"custom_css":[],"settings":{"image":"shopify:\/\/shop_images\/Green_Modern_Interior_Wall_Art_Frame_Poster_Mockup_Instagram_Post.jpg","height":"adapt","desktop_image_width":"medium","layout":"image_first","image_behavior":"none","content_layout":"no-overlap","desktop_content_position":"middle","desktop_content_alignment":"left","mobile_content_alignment":"left","section_color_scheme":"scheme-ada839c9-563d-4e39-a40b-9b1af0fa339f","color_scheme":"accent-1","padding_top":36,"padding_bottom":32}},"collection_list_hFbi9i":{"type":"collection-list","blocks":{"featured_collection_qy3CKz":{"type":"featured_collection","settings":{"collection":"tablouri-tip-pictura"}},"featured_collection_Hj7C4b":{"type":"featured_collection","settings":{"collection":"tablouri-constelatii"}},"featured_collection_Jz4UJB":{"type":"featured_collection","settings":{"collection":"tablouri-baby-welcome"}}},"block_order":["featured_collection_qy3CKz","featured_collection_Hj7C4b","featured_collection_Jz4UJB"],"name":"t:sections.collection-list.presets.name","settings":{"title":"Cadourile care se transforma in amintiri","heading_size":"h2","image_ratio":"adapt","columns_desktop":3,"color_scheme":"","show_view_all":false,"columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"image_with_text_AeCeAG":{"type":"image-with-text","blocks":{"heading_qWzGnX":{"type":"heading","settings":{"heading":"Cine suntem noi?","heading_size":"h2"}},"text_kNaVbD":{"type":"text","settings":{"text":"<p><strong>Artisfera<\/strong> este o afacere de suflet, născută din pasiunea unui cuplu creativ pentru amintiri cu personalitate. Credem că fiecare fotografie spune o poveste, iar noi venim cu un strop de artă ca să o transformăm într-o piesă originală, plină de emoție.<\/p><p>Ne dorim ca fiecare lucrare să fie unică, să reflecte emoțiile și momentele speciale din viața celor care ne aleg. Realizăm <strong>tablouri personalizate<\/strong>, cu detalii precum <strong>datele nașterii unui nou-născut<\/strong> sau <strong>o zi importantă<\/strong> din viața cuiva drag, toate redate într-un stil creativ și atent gândit.<\/p>","text_style":"body"}},"button_Ltwy6V":{"type":"button","settings":{"button_label":"Vezi mai mult","button_link":"shopify:\/\/pages\/contact","button_style_secondary":true}}},"block_order":["heading_qWzGnX","text_kNaVbD","button_Ltwy6V"],"custom_css":[],"settings":{"image":"shopify:\/\/shop_images\/posters-prints-and-visual-artwork-minimal-1-middle.jpg","height":"adapt","desktop_image_width":"medium","layout":"text_first","image_behavior":"zoom-in","content_layout":"no-overlap","desktop_content_position":"top","desktop_content_alignment":"left","mobile_content_alignment":"left","section_color_scheme":"accent-2","color_scheme":"scheme-ada839c9-563d-4e39-a40b-9b1af0fa339f","padding_top":0,"padding_bottom":80}},"featured_collection":{"type":"featured-collection","custom_css":[],"settings":{"collection":"tablouri-baby-welcome","products_to_show":11,"title":"Tablouri Baby Welcome","heading_size":"h2","description":"","show_description":false,"description_style":"body","columns_desktop":4,"enable_desktop_slider":true,"full_width":false,"show_view_all":false,"view_all_style":"solid","color_scheme":"accent-3","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"standard","columns_mobile":"2","swipe_on_mobile":true,"padding_top":20,"padding_bottom":40}},"image_with_text_kbw7hE":{"type":"image-with-text","blocks":{"heading_f8ya4H":{"type":"heading","settings":{"heading":"Cerul special al unei amintiri","heading_size":"h2"}},"text_CWxjhp":{"type":"text","settings":{"text":"<p>Fiecare clipă importantă are cerul ei.<br\/><br\/>Un cer care a fost acolo, deasupra voastră, cu stelele așezate exact așa – tăcute, dar martore ale unui început, unei revederi sau unui nou capitol.<\/p><p>Acest tablou personalizat surprinde harta cerului dintr-o zi și un loc care contează.<br\/><br\/>Poziția reală a stelelor, înrămată cu grijă, pentru ca amintirea să trăiască dincolo de timp.<\/p><p>Un dar vizual cu însemnătate, care spune o poveste în felul său – simplu, frumos și pentru totdeauna.<\/p>","text_style":"body"}},"button_xe4dfd":{"type":"button","settings":{"button_label":"Vezi mai mult","button_link":"shopify:\/\/collections\/tablouri-constelatii","button_style_secondary":true}}},"block_order":["heading_f8ya4H","text_CWxjhp","button_xe4dfd"],"settings":{"image":"shopify:\/\/shop_images\/Copy_of_Rama_tablou_negru_297_x_400_mm_2.jpg","height":"adapt","desktop_image_width":"medium","layout":"image_first","image_behavior":"none","content_layout":"no-overlap","desktop_content_position":"middle","desktop_content_alignment":"left","mobile_content_alignment":"left","section_color_scheme":"accent-3","color_scheme":"accent-3","padding_top":24,"padding_bottom":100}}},"order":["image_with_text_3PaXKQ","collection_list_hFbi9i","image_with_text_AeCeAG","featured_collection","image_with_text_kbw7hE"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_3PaXKQ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dRJyMC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Arta personalizata la un click distanta",
+            "heading_size": "h2"
+          }
+        },
+        "text_FbMQcB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fiecare lucrare este creată cu atenție la detalii și emoție, pornind de la fotografii reale, apoi transpusă digital și imprimată pe suport fizic de calitate. Scopul nostru este să transformam amintirile speciale în opere de artă unice, gata să fie expuse sau oferite cadou.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_QUXaje": {
+          "type": "button",
+          "settings": {
+            "button_label": "Vezi produsele",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_dRJyMC",
+        "text_FbMQcB",
+        "button_QUXaje"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/Simple_Before_and_After_LUT_Slider_Post_Facebook_Post.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-ada839c9-563d-4e39-a40b-9b1af0fa339f",
+        "color_scheme": "accent-1",
+        "padding_top": 36,
+        "padding_bottom": 32
+      }
+    },
+    "collection_list_hFbi9i": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_qy3CKz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tablouri-tip-pictura"
+          }
+        },
+        "featured_collection_Hj7C4b": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tablouri-constelatii"
+          }
+        },
+        "featured_collection_Jz4UJB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tablouri-baby-welcome"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_qy3CKz",
+        "featured_collection_Hj7C4b",
+        "featured_collection_Jz4UJB"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Cadourile care se transforma in amintiri",
+        "heading_size": "h2",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_AeCeAG": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_qWzGnX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cine suntem noi?",
+            "heading_size": "h2"
+          }
+        },
+        "text_kNaVbD": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Artisfera</strong> este o afacere de suflet, născută din pasiunea unui cuplu creativ pentru amintiri cu personalitate. Credem că fiecare fotografie spune o poveste, iar noi venim cu un strop de artă ca să o transformăm într-o piesă originală, plină de emoție.</p><p>Ne dorim ca fiecare lucrare să fie unică, să reflecte emoțiile și momentele speciale din viața celor care ne aleg. Realizăm <strong>tablouri personalizate</strong>, cu detalii precum <strong>datele nașterii unui nou-născut</strong> sau <strong>o zi importantă</strong> din viața cuiva drag, toate redate într-un stil creativ și atent gândit.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_Ltwy6V": {
+          "type": "button",
+          "settings": {
+            "button_label": "Vezi mai mult",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_qWzGnX",
+        "text_kNaVbD",
+        "button_Ltwy6V"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/posters-prints-and-visual-artwork-minimal-1-middle.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "zoom-in",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "accent-2",
+        "color_scheme": "scheme-ada839c9-563d-4e39-a40b-9b1af0fa339f",
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "collection": "tablouri-baby-welcome",
+        "products_to_show": 11,
+        "title": "Tablouri Baby Welcome",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "accent-3",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
+    },
+    "image_with_text_kbw7hE": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_f8ya4H": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cerul special al unei amintiri",
+            "heading_size": "h2"
+          }
+        },
+        "text_CWxjhp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fiecare clipă importantă are cerul ei.<br/><br/>Un cer care a fost acolo, deasupra voastră, cu stelele așezate exact așa – tăcute, dar martore ale unui început, unei revederi sau unui nou capitol.</p><p>Acest tablou personalizat surprinde harta cerului dintr-o zi și un loc care contează.<br/><br/>Poziția reală a stelelor, înrămată cu grijă, pentru ca amintirea să trăiască dincolo de timp.</p><p>Un dar vizual cu însemnătate, care spune o poveste în felul său – simplu, frumos și pentru totdeauna.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_xe4dfd": {
+          "type": "button",
+          "settings": {
+            "button_label": "Vezi mai mult",
+            "button_link": "shopify://collections/tablouri-constelatii",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_f8ya4H",
+        "text_CWxjhp",
+        "button_xe4dfd"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Copy_of_Rama_tablou_negru_297_x_400_mm_2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "accent-3",
+        "color_scheme": "accent-3",
+        "padding_top": 24,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "image_with_text_3PaXKQ",
+    "collection_list_hFbi9i",
+    "image_with_text_AeCeAG",
+    "featured_collection",
+    "image_with_text_kbw7hE"
+  ]
+}
