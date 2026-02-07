@@ -26,8 +26,8 @@
         "ai_gen_block_6cc47a2_WhF3Vi": {
           "type": "ai_gen_block_6cc47a2",
           "settings": {
-            "heading": "",
-            "heading_alignment": "center",
+            "heading": "Alege tipul de tablou dorit:",
+            "heading_alignment": "left",
             "heading_size": 32,
             "heading_color": "#000000",
             "heading_spacing": 40,
