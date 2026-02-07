@@ -17,54 +17,6 @@
         "color_scheme": "accent-3"
       }
     },
-    "collection_list_qnbrYF": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_TrGQmL": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "tablouri-tip-pictura"
-          }
-        },
-        "featured_collection_8EYFrw": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "tablouri-baby-welcome"
-          }
-        },
-        "featured_collection_ykKEhk": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "tablouri-constelatii"
-          }
-        },
-        "featured_collection_7CJr3p": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_TrGQmL",
-        "featured_collection_8EYFrw",
-        "featured_collection_ykKEhk",
-        "featured_collection_7CJr3p"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 4,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -88,7 +40,6 @@
   },
   "order": [
     "banner",
-    "collection_list_qnbrYF",
     "product-grid"
   ]
 }
