@@ -1,1 +1,77 @@
-{"sections":{"main":{"type":"main-list-collections","disabled":true,"settings":{"title":"Collections","sort":"alphabetical","image_ratio":"square","columns_desktop":3,"columns_mobile":"2"}},"collection_list_nhgWdW":{"type":"collection-list","blocks":{"featured_collection_4DV4Hx":{"type":"featured_collection","settings":{"collection":""}},"featured_collection_rrTzqp":{"type":"featured_collection","settings":{"collection":""}},"featured_collection_GYWLRX":{"type":"featured_collection","settings":{"collection":""}}},"block_order":["featured_collection_4DV4Hx","featured_collection_rrTzqp","featured_collection_GYWLRX"],"name":"t:sections.collection-list.presets.name","settings":{"title":"Collections","heading_size":"h1","image_ratio":"square","columns_desktop":3,"color_scheme":"accent-3","show_view_all":false,"columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}}},"order":["main","collection_list_nhgWdW"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "disabled": true,
+      "settings": {
+        "title": "Collections",
+        "sort": "alphabetical",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "columns_mobile": "2"
+      }
+    },
+    "17704975475a9151e4": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6cc47a2_WhF3Vi": {
+          "type": "ai_gen_block_6cc47a2",
+          "settings": {
+            "heading": "",
+            "heading_alignment": "center",
+            "heading_size": 32,
+            "heading_color": "#000000",
+            "heading_spacing": 40,
+            "container_width": 1200,
+            "columns_desktop": 4,
+            "columns_tablet": 2,
+            "columns_mobile": "1",
+            "column_gap": 32,
+            "text_alignment": "center",
+            "padding_top": 60,
+            "padding_bottom": 60,
+            "image_spacing": 16,
+            "image_border_radius": 0,
+            "title_size": 16,
+            "title_color": "#000000",
+            "title_hover_color": "#666666",
+            "column_1_image": "shopify://shop_images/BlackFrameInphoto_5.png",
+            "column_1_title": "Tablouri Tip Pictura",
+            "column_1_link": "shopify://collections/tablouri-tip-pictura",
+            "column_2_image": "shopify://shop_images/Gray_3D_Minimalist_Wall_Frame_Mockup_Instagram_Post_2.png",
+            "column_2_title": "Tablouri Baby Welcome",
+            "column_2_link": "shopify://collections/tablouri-baby-welcome",
+            "column_3_image": "shopify://shop_images/Floral_White_Frame_Template_3.png",
+            "column_3_title": "Tablouri Constelatii",
+            "column_3_link": "shopify://collections/tablouri-constelatii",
+            "column_4_image": "shopify://shop_images/Colaj40.png",
+            "column_4_title": "Colaje",
+            "column_4_link": "shopify://collections/tablouri-colaj",
+            "column_5_title": "",
+            "column_5_link": "",
+            "column_6_title": "",
+            "column_6_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6cc47a2_WhF3Vi"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "17704975475a9151e4"
+  ]
+}
