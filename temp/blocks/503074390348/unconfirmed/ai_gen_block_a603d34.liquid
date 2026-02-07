@@ -1,6 +1,654 @@
+{% doc %}
+  @prompt
+    I want a section where I need to say the upload instructions, more exactly to upload outside taken pictures(with sunlight or good light), not blurry, good resolution photos only
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-upload-instructions-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: {{ block.settings.padding }}px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    border: {{ block.settings.border_thickness }}px solid {{ block.settings.border_color }};
+  }
+
+  .ai-upload-instructions-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.content_max_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-upload-instructions-header-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+    margin-bottom: {{ block.settings.spacing_between_elements }}px;
+  }
+
+  .ai-upload-instructions-icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    margin: 0 auto {{ block.settings.spacing_between_elements }}px;
+    color: {{ block.settings.icon_color }};
+  }
+
+  .ai-upload-instructions-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ai-upload-instructions-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 {{ block.settings.spacing_between_elements }}px;
+    font-weight: 600;
+  }
+
+  .ai-upload-instructions-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    color: {{ block.settings.description_color }};
+    margin: 0 0 {{ block.settings.spacing_between_elements }}px;
+    line-height: 1.6;
+  }
+
+  .ai-upload-instructions-list-{{ ai_gen_id }} {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ai-upload-instructions-item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: flex-start;
+    gap: {{ block.settings.item_gap }}px;
+    padding: {{ block.settings.item_padding }}px;
+    margin-bottom: {{ block.settings.item_spacing }}px;
+    background-color: {{ block.settings.item_background_color }};
+    border-radius: {{ block.settings.item_border_radius }}px;
+    border-left: {{ block.settings.item_border_thickness }}px solid {{ block.settings.item_border_color }};
+  }
+
+  .ai-upload-instructions-item-icon-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.item_icon_size }}px;
+    height: {{ block.settings.item_icon_size }}px;
+    color: {{ block.settings.item_icon_color }};
+    margin-top: 2px;
+  }
+
+  .ai-upload-instructions-item-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ai-upload-instructions-item-content-{{ ai_gen_id }} {
+    flex-grow: 1;
+  }
+
+  .ai-upload-instructions-item-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.item_title_size }}px;
+    color: {{ block.settings.item_title_color }};
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+
+  .ai-upload-instructions-item-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.item_text_size }}px;
+    color: {{ block.settings.item_text_color }};
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-upload-instructions-{{ ai_gen_id }} {
+      width: 100%;
+      padding: {{ block.settings.padding | times: 0.7 }}px;
+    }
+
+    .ai-upload-instructions-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.85 }}px;
+    }
+
+    .ai-upload-instructions-item-{{ ai_gen_id }} {
+      padding: {{ block.settings.item_padding | times: 0.7 }}px;
+    }
+  }
+{% endstyle %}
+
+<upload-instructions-{{ ai_gen_id }}
+  class="ai-upload-instructions-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-upload-instructions-container-{{ ai_gen_id }}">
+    <div class="ai-upload-instructions-header-{{ ai_gen_id }}">
+      {% if block.settings.show_icon %}
+        <div class="ai-upload-instructions-icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+        </div>
+      {% endif %}
+
+      {% if block.settings.title != blank %}
+        <h2 class="ai-upload-instructions-title-{{ ai_gen_id }}">
+          {{ block.settings.title }}
+        </h2>
+      {% endif %}
+
+      {% if block.settings.description != blank %}
+        <div class="ai-upload-instructions-description-{{ ai_gen_id }}">
+          {{ block.settings.description }}
+        </div>
+      {% endif %}
+    </div>
+
+    <ul class="ai-upload-instructions-list-{{ ai_gen_id }}">
+      {% if block.settings.show_sunlight_instruction %}
+        <li class="ai-upload-instructions-item-{{ ai_gen_id }}">
+          <div class="ai-upload-instructions-item-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </div>
+          <div class="ai-upload-instructions-item-content-{{ ai_gen_id }}">
+            <div class="ai-upload-instructions-item-title-{{ ai_gen_id }}">
+              {{ block.settings.sunlight_title }}
+            </div>
+            <div class="ai-upload-instructions-item-text-{{ ai_gen_id }}">
+              {{ block.settings.sunlight_text }}
+            </div>
+          </div>
+        </li>
+      {% endif %}
+
+      {% if block.settings.show_clarity_instruction %}
+        <li class="ai-upload-instructions-item-{{ ai_gen_id }}">
+          <div class="ai-upload-instructions-item-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+          <div class="ai-upload-instructions-item-content-{{ ai_gen_id }}">
+            <div class="ai-upload-instructions-item-title-{{ ai_gen_id }}">
+              {{ block.settings.clarity_title }}
+            </div>
+            <div class="ai-upload-instructions-item-text-{{ ai_gen_id }}">
+              {{ block.settings.clarity_text }}
+            </div>
+          </div>
+        </li>
+      {% endif %}
+
+      {% if block.settings.show_resolution_instruction %}
+        <li class="ai-upload-instructions-item-{{ ai_gen_id }}">
+          <div class="ai-upload-instructions-item-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+          </div>
+          <div class="ai-upload-instructions-item-content-{{ ai_gen_id }}">
+            <div class="ai-upload-instructions-item-title-{{ ai_gen_id }}">
+              {{ block.settings.resolution_title }}
+            </div>
+            <div class="ai-upload-instructions-item-text-{{ ai_gen_id }}">
+              {{ block.settings.resolution_text }}
+            </div>
+          </div>
+        </li>
+      {% endif %}
+
+      {% if block.settings.show_outdoor_instruction %}
+        <li class="ai-upload-instructions-item-{{ ai_gen_id }}">
+          <div class="ai-upload-instructions-item-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+          </div>
+          <div class="ai-upload-instructions-item-content-{{ ai_gen_id }}">
+            <div class="ai-upload-instructions-item-title-{{ ai_gen_id }}">
+              {{ block.settings.outdoor_title }}
+            </div>
+            <div class="ai-upload-instructions-item-text-{{ ai_gen_id }}">
+              {{ block.settings.outdoor_text }}
+            </div>
+          </div>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</upload-instructions-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class UploadInstructions{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.setupAccessibility();
+      }
+
+      setupAccessibility() {
+        const list = this.querySelector('.ai-upload-instructions-list-{{ ai_gen_id }}');
+        if (list) {
+          list.setAttribute('role', 'list');
+          const items = list.querySelectorAll('.ai-upload-instructions-item-{{ ai_gen_id }}');
+          items.forEach(item => {
+            item.setAttribute('role', 'listitem');
+          });
+        }
+      }
+    }
+
+    customElements.define('upload-instructions-{{ ai_gen_id }}', UploadInstructions{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Upload instructions",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show upload icon",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "Instrucțiuni pentru încărcarea fotografiilor"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Pentru cele mai bune rezultate, vă rugăm să urmați aceste instrucțiuni atunci când încărcați fotografiile:</p>"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Sunlight instruction"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sunlight_instruction",
+      "label": "Show sunlight instruction",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "sunlight_title",
+      "label": "Title",
+      "default": "Lumină naturală sau bună"
+    },
+    {
+      "type": "textarea",
+      "id": "sunlight_text",
+      "label": "Text",
+      "default": "Fotografiați în exterior cu lumină naturală sau asigurați-vă că aveți iluminare bună. Evitați fotografiile întunecate sau slab iluminate."
+    },
+    {
+      "type": "header",
+      "content": "Clarity instruction"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_clarity_instruction",
+      "label": "Show clarity instruction",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "clarity_title",
+      "label": "Title",
+      "default": "Fără blur"
+    },
+    {
+      "type": "textarea",
+      "id": "clarity_text",
+      "label": "Text",
+      "default": "Asigurați-vă că fotografiile sunt clare și focalizate. Fotografiile neclare sau mișcate nu pot fi procesate corect."
+    },
+    {
+      "type": "header",
+      "content": "Resolution instruction"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_resolution_instruction",
+      "label": "Show resolution instruction",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "resolution_title",
+      "label": "Title",
+      "default": "Rezoluție înaltă"
+    },
+    {
+      "type": "textarea",
+      "id": "resolution_text",
+      "label": "Text",
+      "default": "Încărcați doar fotografii de înaltă calitate cu rezoluție bună. Fotografiile de calitate scăzută vor afecta rezultatul final."
+    },
+    {
+      "type": "header",
+      "content": "Outdoor instruction"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_outdoor_instruction",
+      "label": "Show outdoor instruction",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "outdoor_title",
+      "label": "Title",
+      "default": "Fotografii în exterior"
+    },
+    {
+      "type": "textarea",
+      "id": "outdoor_text",
+      "label": "Text",
+      "default": "Preferabil fotografii realizate în exterior pentru cea mai bună lumină naturală și claritate."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "Content max width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Padding",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "spacing_between_elements",
+      "label": "Spacing between elements",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#f7f8f8"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Border"
+    },
+    {
+      "type": "range",
+      "id": "border_thickness",
+      "label": "Border thickness",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size",
+      "min": 30,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Instruction items"
+    },
+    {
+      "type": "range",
+      "id": "item_padding",
+      "label": "Item padding",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "label": "Item spacing",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "item_gap",
+      "label": "Item gap",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "item_background_color",
+      "label": "Item background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "item_border_thickness",
+      "label": "Item border thickness",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 3
+    },
+    {
+      "type": "color",
+      "id": "item_border_color",
+      "label": "Item border color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "item_border_radius",
+      "label": "Item border radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "item_icon_size",
+      "label": "Item icon size",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "item_icon_color",
+      "label": "Item icon color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "label": "Item title size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "item_title_color",
+      "label": "Item title color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "item_text_size",
+      "label": "Item text size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "item_text_color",
+      "label": "Item text color",
+      "default": "#666666"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Upload instructions"
+    }
+  ]
+}
 {% endschema %}
