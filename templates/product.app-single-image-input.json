@@ -95,6 +95,68 @@
         "padding_bottom": 12
       }
     },
+    "collapsible_content_Q7Q9Wh": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_4q8yyH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fotografii clare",
+            "icon": "check_mark",
+            "row_content": "<p>Avem nevoie de fotografii de o calitate cat mai ridicata pentru ca rezultatul sa fie pe masura</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_P3QfBr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fotografii prim-plan",
+            "icon": "check_mark",
+            "row_content": "<p>Este necesar ca persoana sau persoanele din fotogarfie sa fie in prim-plan</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_EUNyK9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fotografii luminoase",
+            "icon": "check_mark",
+            "row_content": "<p>Luminozitatea fotografiei este un factor esential in realizarea tablourilor, astfel, pentru rezultate calitative avem nevoie de imagini luminoase</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8WwBDw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fotografii care nu sunt Selfie",
+            "icon": "check_mark",
+            "row_content": "<p>Fotografiile selfie nu ofera un suport solid pentru arta digitala, fiind absolut incompatibile cu modul </p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_4q8yyH",
+        "collapsible_row_P3QfBr",
+        "collapsible_row_EUNyK9",
+        "collapsible_row_8WwBDw"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Instructiuni",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -116,6 +178,7 @@
   },
   "order": [
     "main",
+    "collapsible_content_Q7Q9Wh",
     "related-products"
   ]
 }
