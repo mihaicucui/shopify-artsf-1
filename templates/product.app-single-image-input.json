@@ -23,6 +23,15 @@
           "type": "title",
           "settings": {}
         },
+        "collapsible_tab_nWN6hg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Executie si livrare",
+            "icon": "truck",
+            "content": "<p>Executia si livrarea produsului se realizeaza de obicei in termen de 5 zile lucratoare de la plasarea comenzii. Incercam sa livram tablourile cat mai repede cu putinta</p>",
+            "page": ""
+          }
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -70,6 +79,7 @@
       "block_order": [
         "vendor",
         "title",
+        "collapsible_tab_nWN6hg",
         "price",
         "variant_picker",
         "text_rWATFe",
