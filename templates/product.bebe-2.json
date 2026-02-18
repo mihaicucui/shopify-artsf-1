@@ -38,6 +38,12 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "live_product_options_app_block_PHUp7J": {
+          "type": "shopify://apps/live-product-options/blocks/app-block/88bfdf40-5e27-4962-a966-70c8d1e87757",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {}
@@ -66,6 +72,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "live_product_options_app_block_PHUp7J",
         "description",
         "magical_form_fields_custom_fields_BtLCkn",
         "buy_buttons",
