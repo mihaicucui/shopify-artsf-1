@@ -164,13 +164,13 @@
           "custom_css": "custom-fields {\n  overflow: hidden;\n}\ninput[type=\"date\"] {\n  min-height: 48px;\nmax-width:100%!important;\nwidth:auto!important;\noverflow:hidden;\n}"
         }
       },
-      "15132424025755801183": {
-        "type": "shopify://apps/upload-lift/blocks/app-embed/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
+      "1787840288555608609": {
+        "type": "shopify://apps/live-product-options/blocks/app-embed/88bfdf40-5e27-4962-a966-70c8d1e87757",
         "disabled": false,
         "settings": {}
       },
-      "1787840288555608609": {
-        "type": "shopify://apps/live-product-options/blocks/app-embed/88bfdf40-5e27-4962-a966-70c8d1e87757",
+      "15132424025755801183": {
+        "type": "shopify://apps/upload-lift/blocks/app-embed/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
         "disabled": false,
         "settings": {}
       }
